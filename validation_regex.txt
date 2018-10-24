@@ -1,0 +1,26 @@
+phone number validation using regex
+/^[2-9]{2}\d{8}/g : 9912345670
+
+email validation using regex :
+/^[a-zA-Z0-9_]+[a-zA-Z0-9_.+-]+[a-zA-Z0-9_]@[a-zA-Z]{2,3}[a-zA-Z_]+\.+([a-zA-Z]{2,3}\.){0,1}[a-zA-Z]{2,3}$/g : so far this the best regex for email validation : Yay!
+valid for :
+[alphabet or underscore] - 1 character atleast
+followed by any number of characters including _+.-
+followed by atleast 1 character or underscore before @
+followed by @
+followed by atleast 1 character or underscore
+followed by any number of character including _+.-
+followed by 1 dot 
+followed by atleast 2 or 3 character of country/organisation
+
+ab.cd@gmail.com      | _abcd@gmail.com       | ab+cd@gmail.com        | abcd@gma.com
+ab.cd@gmail.co.in    | _abcd@gmail.co.in     | ab-cd@gmail.co.in      | abcd@gmail.co.in
+ab.cd@gmail.co.inc   | _abcd@gmail.co.inc    | ab_cd@gmail.co.inc     | abcd@gmail.co.inc
+ab.cd@gmail.org.uk   | _abcd@gmail.org.uk    | ab9900cd@gmail.org.uk  | abcd@gmail.org.uk
+
+invalid for : 
+1abc@g.co
+1abc@gm.com
+1abc@gmai.comm
+
+
